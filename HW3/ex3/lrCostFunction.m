@@ -36,9 +36,9 @@ grad = zeros(size(theta));
 %           grad = grad + YOUR_CODE_HERE (using the temp variable)
 %
 
-h = sigmoid(X * theta);
+h = sigmoid(X * theta); % h = 5000x1; y = 5000x1;
 
-J_wo_Reg = (-y' * log(h) - (1 - y)' * log(1 - h)) ./ m;
+J_wo_Reg = (-y' * log(h) - (1 - y)' * log(1 - h)) ./ m; % J_wo_Reg = 1x1
 
 J = J_wo_Reg + (lambda / (2 * m)) * sum(theta(2:end,:).^2);
 
